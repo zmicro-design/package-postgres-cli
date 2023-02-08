@@ -4,6 +4,10 @@ export PACKAGE_NAME="postgresql-client"
 import "$ZMICRO_PACKAGES_PATH/$PACKAGE_NAME/config"
 import "$ZMICRO_PACKAGES_PATH/$PACKAGE_NAME/core"
 
+if [ "$(os::is_macos)" = "true" ]; then
+  export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+fi
+
 help() {
   echo "Usage:"
   echo "  zmicro postgresql-client <args ...>"
