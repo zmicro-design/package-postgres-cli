@@ -59,7 +59,7 @@ install() {
     fi
     ;;
   ubuntu)
-    pm install -y postgres-client
+    pm install -y postgresql-client
     if [ "$?" != "0" ]; then
       log::error "[$(timestamp)] failed to install postgres-client"
       return 1
@@ -73,7 +73,7 @@ install() {
     fi
     ;;
   alpine)
-    pm install -y postgres-client
+    pm install -y postgresql-client
     if [ "$?" != "0" ]; then
       log::error "[$(timestamp)] failed to install postgres-client"
       return 1
