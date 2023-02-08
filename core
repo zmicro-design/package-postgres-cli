@@ -53,22 +53,43 @@ install() {
   case $os in
   macos)
     pm install -y libpq
+    if [ "$?" != "0" ]; then
+      log::error "[$(timestamp)] failed to install libpq"
+      return 1
+    fi
     ;;
   ubuntu)
     pm install -y postgres-client
+    if [ "$?" != "0" ]; then
+      log::error "[$(timestamp)] failed to install postgres-client"
+      return 1
+    fi
     ;;
   centos)
     pm install -y postgresql
+    if [ "$?" != "0" ]; then
+      log::error "[$(timestamp)] failed to install postgres-client"
+      return 1
+    fi
     ;;
   alpine)
     pm install -y postgres-client
+    if [ "$?" != "0" ]; then
+      log::error "[$(timestamp)] failed to install postgres-client"
+      return 1
+    fi
     ;;
   fedora)
     pm install -y postgresql
+    if [ "$?" != "0" ]; then
+      log::error "[$(timestamp)] failed to install postgres-client"
+      return 1
+    fi
     ;;
   *)
     log::error "[$(timestamp)] unsupport os: $os ($(uname -m))"
     return 1
+    ;;
   esac
 
   # clean
