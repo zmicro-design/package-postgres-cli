@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export PACKAGE_CORE_NAME="postgresql-client"
+export PACKAGE_CORE_NAME="postgres-client"
 export PACKAGE_CORE_BIN_NAME="$PACKAGE_CORE_NAME"
 export PACKAGE_CORE_VERSION=v2.1.7
 export PACKAGE_CORE_ORG="lib"
 
-export PACKAGE_CORE_RELEASE_DOWNLOAD="https://github.com/${PACKAGE_CORE_ORG}/postgresql-client/releases/download"
+export PACKAGE_CORE_RELEASE_DOWNLOAD="https://github.com/${PACKAGE_CORE_ORG}/postgres-client/releases/download"

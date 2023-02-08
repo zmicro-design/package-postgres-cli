@@ -55,13 +55,13 @@ install() {
     pm install -y libpq
     ;;
   ubuntu)
-    pm install -y postgresql-client
+    pm install -y postgres-client
     ;;
   centos)
     pm install -y postgresql
     ;;
   alpine)
-    pm install -y postgresql-client
+    pm install -y postgres-client
     ;;
   fedora)
     pm install -y postgresql

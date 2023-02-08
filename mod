@@ -1,4 +1,4 @@
-NAME=postgresql-client
+NAME=postgres-client
 VERSION=v1.0.1
 MODULE=package
 DESCRIPTION="PostgreSQL Client CLI"
